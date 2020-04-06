@@ -11,9 +11,7 @@ Plug 'tpope/vim-surround'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
-"Plug 'Shougo/neocomplcache.vim'
 Plug 'vim-airline/vim-airline'
-"Plug 'Valloric/YouCompleteMe'
 Plug 'chrisbra/colorizer'
 
 " search
@@ -26,12 +24,12 @@ Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
 
+" Easy code overview/navigation
 Plug 'majutsushi/tagbar'
 
 " Colorschemes
 Plug 'chriskempson/base16-vim'
 Plug 'morhetz/gruvbox'
-
 "" colorful
 Plug 'dracula/vim'
 Plug 'NLKNguyen/papercolor-theme'
@@ -52,12 +50,8 @@ Plug 'logico-dev/typewriter'
 " Golang
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
-" Haskell
-"Plug 'enomsg/vim-haskellConcealPlus'
-Plug 'Twinside/vim-haskellConceal'
-Plug 'travitch/hasksyn'
-
-Plug 'purescript-contrib/purescript-vim'
+" Code completion
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 call plug#end()
 
@@ -181,6 +175,7 @@ map <C-l> <C-w>l
 
 let g:fzf_tags_command = 'ctags -f tags -R .'
 command! GenerateCtags :!ctags -R .
+command! GenerateGotags :!gotags -R .
 
 let g:gitgutter_sign_added = '●'
 let g:gitgutter_sign_modified = '●'
