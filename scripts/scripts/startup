@@ -1,0 +1,12 @@
+#!/bin/bash 
+
+xrandr --output DP1-2 --auto --left-of eDP1 --rotate left
+xrandr --output eDP1 --primary
+
+setxkbmap -layout us,es
+setxkbmap -option 'grp:alt_shift_toggle'
+
+xmodmap ~/.Xmodmap
+
+# feh --bg-scale /home/alberts/Pictures/maia.png
+feh --bg-scale /home/alberts/Pictures/free-your-soul-wallpaper.jpg
